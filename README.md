@@ -34,12 +34,3 @@ Bug-Reports/     Defect summary and supporting screenshots
 Test-Evidence/   Screenshots and other execution evidence
 Test-Summary/    Final execution summary and conclusions
 ```
-
-## Project Status
-
-**Phase 1 — Project setup and application exploration**
-
-The repository structure and project overview are established. The next
-milestone is to document the test plan and application scope before creating
-detailed scenarios and test cases.
-
