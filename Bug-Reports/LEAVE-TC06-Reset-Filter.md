@@ -5,7 +5,7 @@
 - **Bug ID:** BUG-001
 - **Module:** Leave Management
 - **Title:** Reset does not clear the Pending Approval filter
-- **Status:** Open — Reproduction confirmation required
+- **Status:** Not Reproduced — Data-dependent behavior observed
 - **Severity:** Medium
 - **Priority:** Medium
 - **Related test case:** LEAVE-TC06
@@ -32,16 +32,23 @@ unfiltered leave list is restored.
 
 ## Actual Result
 
-The `Pending Approval` filter remained applied after selecting **Reset**, and
-the leave list did not return to the default unfiltered state.
+During the original execution, the `Pending Approval` filter appeared to
+remain applied after selecting **Reset**, and the list did not return to the
+expected default results.
+
+During follow-up verification, **Reset** cleared the status filter back to
+`-- Select --`, but the list still displayed **No Records Found**. This
+indicates that the default result set was empty in the available demo data and
+does not confirm that Reset failed to clear the filter.
 
 ## Evidence
 
-No screenshot is currently attached. Evidence should be added if the behavior
-is reproduced.
+No screenshot is currently attached. The behavior should be reconsidered if it
+can be reproduced with a known leave record available before filing a confirmed
+defect.
 
 ## Investigation Notes
 
-The behavior was observed during manual execution of `LEAVE-TC06`. It should
-be reproduced in the demo environment before final defect closure or severity
-confirmation because the shared demo data and session state may change.
+The behavior was observed during the initial manual execution but was not
+reproduced during follow-up verification. The available demo data and session
+state may affect the result.
